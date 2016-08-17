@@ -1,8 +1,9 @@
 #mainLogo {
     font-family:'Righteous', cursive;
     font-size: 100px;
-    margin-left: 500px;
+    margin-left: 400px;
     text-align: center;
+    text-shadow: 3px 3px #ffd700;
 }
 
 .wrapper {
