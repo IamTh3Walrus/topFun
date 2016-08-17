@@ -13,11 +13,11 @@ body {
     margin: 0;
     padding: 0;
 }
-@import "https://fonts.googleapis.com/css?family=Rancho&effect=3d";
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple";
 #mainLogo {
     font-family: Rancho;
     font-size: 100px;
-    margin: 40px 0;
+    margin-left: 50px;
     text-align: center;
 }
 
