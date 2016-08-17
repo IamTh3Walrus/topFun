@@ -1,8 +1,7 @@
-@import "https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple";
 #mainLogo {
-    font-family: Rancho;
+    font-family:'Righteous', cursive;
     font-size: 100px;
-    margin-left: 300px;
+    margin-left: 500px;
     text-align: center;
 }
 
