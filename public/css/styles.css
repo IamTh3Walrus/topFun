@@ -13,6 +13,13 @@ body {
     margin: 0;
     padding: 0;
 }
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=3d";
+#mainLogo {
+    font-family: Rancho;
+    font-size: 100px;
+    margin: 40px 0;
+    text-align: center;
+}
 
 .post {
 	border: 1px solid #cecece;
