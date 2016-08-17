@@ -1,3 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple";
+#mainLogo {
+    font-family: Rancho;
+    font-size: 100px;
+    margin-left: 300px;
+    text-align: center;
+}
+
 .wrapper {
     min-height: 100%;
     position: relative;
@@ -13,13 +21,7 @@ body {
     margin: 0;
     padding: 0;
 }
-@import "https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple";
-#mainLogo {
-    font-family: Rancho;
-    font-size: 100px;
-    margin-left: 300px;
-    text-align: center;
-}
+
 
 .post {
 	border: 1px solid #cecece;
