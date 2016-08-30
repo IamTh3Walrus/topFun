@@ -6,6 +6,7 @@ var Posts = require('./models')['Posts'];
 var Categories = require('./models')['Categories'];
 var Comments = require('./models')['Comments'];
 var session = require('express-session');
+var moment = require('moment');
 
 var models  = require('./models');
 var sequelizeConnection = models.sequelize
@@ -100,11 +101,13 @@ app.post('/:postId/comment', function(req, res) {
 	console.log('body', body);
 	var comment = body.comment;
 
+
 	Comments.create({
 		comment: comment,
-		PostId: parseInt(req.params.postId, 10)
+		PostId: parseInt(req.params.postId)
 	}).then(function(data) {
 		res.redirect('/posts/' + req.params.postId);
+
 	});
 });
 
@@ -138,18 +141,19 @@ app.get('/posts/:id', function(req, res) {
 		},
 		include: [models.Comments]
 	}).then(function(post) {
-		console.log('post', post);
-		res.render('post', {
-			post: post
+		//console.log('post', post);
+		console.log(post);
+		//moment goes here
+		//post.createdAt = moment(post.createdAt).format('LLL')
+		//res.render('post', {
+			//post: post
 		});
-	});
-});
 
-app.post('/posts/:id/:vote', function(req, res) {
-	var operation = '+';
-	if (req.params.vote === 'downvote') {
-		operation = '-';
-	}
+//app.post('/posts/:id/:vote', function(req, res) {
+	//var operation = '+';
+	//if (req.params.vote === 'downvote') {
+		//operation = '-';
+	//}
 
 	Posts.update({
 		score: sequelize.literal('score ' + operation + ' 1')},

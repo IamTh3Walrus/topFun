@@ -14,59 +14,58 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
+
 	<body>
-		
+	<div id="secondHeader">
+		<a class="navbar-brand" href="/">
+        <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
+      </a>
+		<nav class="navbar navbar-default pull-right clearfix" id="topNav">
+		<div id="userinfo"></div>
+		<button type="button" class="btn btn-default" id="logout">Logout</button>
+		</nav>
+		<h1 id="mainLogo">bootUP!</h1>
+	
 		<header id="header">
 			{{#each categories}}
 				<a href="/categories/{{this.url}}?title={{this.title}}">{{this.title}}</a>
 			{{/each}}
 		</header> 
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-
-		       <a class="navbar-brand" href="/">
-		        <img alt="BootUp" class="bootup-brand" src="/image/bootuplogo.png">
-		      </a>
-
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-
-	   		
-
-
-
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="active"><a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a></li>      
-		        <li>
-		        <li id="userinfo"></li>
-		        	<button class="btn btn-Primary" id="logout">Logout</button>
-		        	</li>		        		          
-		        <h1 id="mainLogo">bootUP!</h1>
-		      		      	
-		      </div>
-		    </div>
-
-		    
-		  </div><!-- /.container-fluid -->
-		</nav>
-	<div class="container">
-	<div class="wrapper">
+		</div>
+		<button type="button" class="btn btn-default" id="submitPost">
+		    			 	<a href="/new-post">Submit New Post <span class="sr-only">(current)</span></a>    
+		    			 </button>
+	
+		
+	
+        
+        <div class="container">
+		<div class="wrapper">
+		<div class="container">
 		{{{ body }}}
 		<!-- Start Content -->
 		<div class="particle-box"></div>
 		<!-- End Content -->
-	</div>			
-	</div>
+			</div>
+			</div>
+			</div>
+			
 
 
-	<footer>bootUP!</footer>
+	 <footer id="footerFont">Copyright © 2016 Team <span id="footerBoot">bootUP!</span>
+	 <br>
+	 	<a href="https://github.com/NancyGormanLukas" target="_blank">
+            <img src="/image/nancyImage.png" id="nancyGit"></a>
+              <a href="https://github.com/IamTh3Walrus" target="_blank">
+                  <img src="/image/stephenPic.jpg" id="stephenGit">
+                    </a>
+                    <a href="https://github.com/krn22rjs" target="_blank">
+                  <img src="/image/Octocat.png" id="karinaGit">
+                    </a>
+                    
+
+	 </footer>
+
 	<script type="text/javascript" src="/js/index.js"></script>
-</main>
 </body>
 </html>
